@@ -1,11 +1,27 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 import CategoryScreen from "./screens/CategoryScreen";
+import { StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import MealsOverView from "./screens/MealsOverView";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <>
-      <CategoryScreen />
+      <StatusBar style="light" />
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerBackTitleVisible: false,
+          }}
+          initialRouteName="CategoryScreen"
+        >
+          <Stack.Screen name="MealsCategories" component={CategoryScreen} />
+          <Stack.Screen name="MealsOverview" component={MealsOverView} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
