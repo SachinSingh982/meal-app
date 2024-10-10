@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Meal-App",
+    "name": "My Recipe Book",
     "slug": "Meal-App",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,16 +13,24 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sachinsingh9891.MealApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2b3b859f-a88a-45c5-be1d-99c4a93a48bb"
+      }
     }
   }
 }
